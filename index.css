@@ -1,11 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
-*{
+:root{
+    --dark-blue: #363f5f;
+    --green-dollar: #49AA26;
+    --income: #12a454;
+    --expanse: #e92929;   
+}
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #f0f2f5;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Títulos */
+
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--dark-blue);
+    font-weight: normal;
+}
+
+/* Topo da página */
+
+header {
+    background: #2D4A22;
+    padding: 2rem 0 10rem;
+    text-align: center;
+}
+
+header #logo {
+    color: #fff;
+    font-weight: 100;
+}
+
+.container {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* Balanço da página*/
+
+#balance {
+    margin-top: -9.5rem;
+}
+#balance h2{
+    color: #fff;
+
+}
+
+/* Cartões */
+
+.cards{
+    background-color: #fff;
+    padding: 1.5rem 2rem;
+    border-radius: .15rem;
+    margin-bottom: 2rem;
+}
+
+.cards h3{
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.cards p{
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 3rem;
+    margin-top: 1rem;
+}
+
+.cards.total{
+    background-color: var(--green-dollar);
+    color: #fff;
+}
+/* Tabéla de transações */
+
+#data-table{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: #969cb3;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table th{
+    /* Descrições superiores */
+    background-color: #fff;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+table tbody tr{
+    /* Linha */
+    opacity: 0.7;
+}
+table tbody tr:hover{
+    /* Linha com hover*/
+    opacity: 1;
+    cursor: pointer;
+}
+
+table td{
+    /* Itens da linha*/
+    background: #fff;
+    padding: 1rem 2rem;
+}
+
+td.description{
+    color: var(--dark-blue);
+}
+td.income {
+    color:var(--income);
+}
+td.expanse {
+    color: var(--expanse);
+}
+/* Rodapé da página */
+
+footer {
+    text-align: center;
+    color: var(--dark-blue);
+    opacity:.6;
+    padding: 4rem 0 2rem;
+
+}
