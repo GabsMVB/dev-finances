@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev.Finance$</title>
     <link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                     <img src="assets/income.svg" alt="icone de entrada">
                 </h3>
                 <p>R$5.000,00</p>
-                
+
             </div>
             <div class="cards">
                 <h3>
@@ -45,7 +46,7 @@
         <section id="transactions">
             <h2 class="sr-only">Transações</h2>
 
-            <a href="#" class="button new">+ Nova transação</a>
+            <a href="#" onclick="Modal.open()" class="button new">+ Nova transação</a>
 
             <table id="data-table">
                 <thead>
@@ -54,7 +55,7 @@
                         <th class="expanse">Valor</th>
                         <th class="date">Data</th>
                         <th>
-                            
+
                         </th>
                     </tr>
                 </thead>
@@ -88,9 +89,40 @@
         </section>
     </main>
 
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Nova transação</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label for="description" class="sr-only">Descrição</label>
+                        <input type="text" placeholder="Insira a descrição" id="description" name="description">
+                    </div>
+                    <div class="input-group">
+                        <label for="amount" class="sr-only">Valor</label>
+                        <input type="number" placeholder="R$0,00" id="amount" name="amount">
+                        <small class="help">Use o sinal - (negativo) para despesas e , (virgula) para casas
+                            decimais</small>
+                    </div>
+                    <div class="input-group">
+                        <label for="date" class="sr-only">Data</label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>2021 - devfinance$</p>
     </footer>
+
+    <script src="script.js"></script>
+    
 </body>
 
 </html>
